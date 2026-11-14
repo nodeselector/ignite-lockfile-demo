@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: actions/checkout@0b8737e4d9ada07663402af94ea7f4a3e19cd5ab # v6.1.0
         with:
           persist-credentials: false
       - uses: nodeselector/ignite-build-action@bcca4089a928a3b56e1507fec793bc81bc6fbbae # v2.0.0
