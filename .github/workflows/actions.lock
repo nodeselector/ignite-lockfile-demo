@@ -3,15 +3,22 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.3'
 workflows:
-    '.github/workflows/with-lockfile.yml':
+    '.github/workflows/locked.yml':
         - 'actions/checkout@v6.1.0'
-        - 'nodeselector/ignite-greet-action@v1.0.0'
+        - 'nodeselector/ignite-build-action@v2.0.0'
 dependencies:
     'actions/checkout@v6.1.0':
         ref: 'v6.1.0'
         commit: 'sha1-d23441a48e516b6c34aea4fa41551a30e30af803'
         owner_id: 44036562
         repo_id: 197814629
+    'nodeselector/ignite-build-action@v2.0.0':
+        ref: 'v2.0.0'
+        commit: 'sha1-bcca4089a928a3b56e1507fec793bc81bc6fbbae'
+        owner_id: 29457092
+        repo_id: 1457412637
+        uses:
+            - 'nodeselector/ignite-greet-action@v1.0.0'
     'nodeselector/ignite-greet-action@v1.0.0':
         ref: 'v1.0.0'
         commit: 'sha1-8b043ee4d77811d2b2e5535e90269203e11f7f97'
